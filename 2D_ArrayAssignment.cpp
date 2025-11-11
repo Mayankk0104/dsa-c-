@@ -28,7 +28,7 @@ void printSecondROw(int arr[][4] , int n ,int m){
 
     }
     cout<<"Sum of 2nd row numbers is:"<<currSum<<endl;
-        
+
 
 }
 
@@ -48,7 +48,7 @@ void printArray(int arr[][2] , int n , int m){
 }
 
 void transposingArray(int arr[][3] , int n , int m){
-    
+
     int transposeArray[3][2]= {};
 
     for(int i = 0; i < n; i++){
@@ -56,7 +56,7 @@ void transposingArray(int arr[][3] , int n , int m){
         for(int j = 0; j < m; j++ ){
 
             transposeArray[j][i] = arr[i][j];
-            
+
         }
     }
 
@@ -67,7 +67,7 @@ void transposingArray(int arr[][3] , int n , int m){
 
 void oneToTwoDimension(int arr[] ,int size ,int  n , int m){
 
-    
+
 
     if(size != m * n){
         cout<<"nott";
@@ -80,7 +80,7 @@ void oneToTwoDimension(int arr[] ,int size ,int  n , int m){
         int index = 0;
 
         for(int i = 0; i < n; i++){
-            
+
 
             for(int j = 0 ; j < m; j++){
                 twoDArray[i][j] = arr[index];
@@ -104,7 +104,7 @@ void rotateMatrixBy90(int arr[][3] , int n){
     for(int i = 0; i < n; i++){
 
         for(int j = 0; j < n; j++){
-            
+
             newMatrix[i][j] = arr[n-1-j][i];
         }
 
@@ -123,7 +123,7 @@ void rotateMatrixBy90(int arr[][3] , int n){
         cout<<endl;
     }
 
-    
+
 
 }
 
@@ -141,12 +141,12 @@ int main()
                       {11, 4, 3},
                       {2, 2, 3}};
 
-    
+
       int arr3[3][3] = {{1, 2,3},
                       {4,5, 6},
                       {7, 8, 9}};
 
-                      
+
 
     // printingSameNumber(arr1, 2, 3, 7);
     // printSecondROw(arr2,3,4);
