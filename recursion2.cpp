@@ -126,8 +126,23 @@ using namespace std;
 
 
 
+void towerOfHanoi(int n  , string src , string help , string dest){
+    if(n == 1){
+        cout<<"transfer disk :" << n << "from :" << src << "to" << dest<<"\n";
+        return;
+    }
+
+    towerOfHanoi(n-1,src ,dest , help );
+    cout<<"transfer disk :" << n << "from :"  << src << "to" << dest<<"\n";
+
+    towerOfHanoi(n-1 , help , src ,dest);
+    
+
+}
 
 int main(){
+
+    towerOfHanoi(3,"A","B","C");
     // int arr[] = {3,2,4,5,6,2,7,2,2};
     // int size = sizeof(arr) / sizeof(int);
     // int indices[] = {0};
