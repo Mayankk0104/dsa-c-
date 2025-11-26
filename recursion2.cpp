@@ -126,23 +126,155 @@ using namespace std;
 
 
 
-void towerOfHanoi(int n  , string src , string help , string dest){
-    if(n == 1){
-        cout<<"transfer disk :" << n << "from :" << src << "to" << dest<<"\n";
-        return;
-    }
+// void towerOfHanoi(int n  , string src , string help , string dest){
+//     if(n == 1){
+//         cout<<"transfer disk :" << n << "from :" << src << "to" << dest<<"\n";
+//         return;
+//     }
 
-    towerOfHanoi(n-1,src ,dest , help );
-    cout<<"transfer disk :" << n << "from :"  << src << "to" << dest<<"\n";
+//     towerOfHanoi(n-1,src ,dest , help );
+//     cout<<"transfer disk :" << n << "from :"  << src << "to" << dest<<"\n";
 
-    towerOfHanoi(n-1 , help , src ,dest);
-    
+//     towerOfHanoi(n-1 , help , src ,dest);
 
-}
+
+// }
+
+
+// static int first = -1;
+// static int last = -1;
+
+
+// void findOccurences(string str , int idx ,char element){
+//     if(idx == str.length()){
+//         cout<<first<<"\n";
+//         cout<<last<<"\n";
+//         return;
+//     }
+
+//     char currChar = str.at(idx);
+
+//     if(currChar == element){
+//         if(first == -1){
+//             first = idx;
+//         }
+//         else{
+//             last = idx;
+//         }
+//     }
+
+//     findOccurences(str,idx+1,element);
+
+// }
+
+
+
+// void movingallX(string str , int idx , string newStr ,int count){
+
+
+//     if(idx == str.length()){
+//         for(int i = 0; i < count; i++){
+//             newStr += 'x';
+//         }
+//         cout<<newStr<<"\n";
+//         return;
+//     }
+
+//     char currChar = str.at(idx);
+
+
+//     if(currChar == 'x' ){
+//         count++;
+//         movingallX(str,idx+1,newStr,count);
+//     }
+//     else{
+//         newStr += currChar;
+//         movingallX(str,idx+1,newStr,count);
+
+//     }
+
+// }
+
+
+// void printPerm(string str , string permutation){
+//     if(str.length()== 0){
+//         cout<<permutation<<endl;
+//         return;
+//     }
+
+//     for(int i = 0; i < str.length(); i++){
+//         char currChar = str.at(i);
+
+//         string newStr = str.substr(0,i) + str.substr(i+1);
+//         printPerm(newStr , permutation+currChar);
+//     }
+
+// }
+
+// int countPath(int i , int j , int n , int m){
+
+//     if(i == n || j == m){
+//         return 0;
+//     }
+
+//     if(i == n-1 || j == m-1){
+//         return 1;
+//     }
+
+//     int downPath = countPath(i+1 , j , n ,m);
+
+//     int upPath = countPath(i,j+1,n,m);
+
+//     return downPath + upPath;
+// }
+
+
+// int tilingProb( int n , int m){
+
+
+
+//   if(n == m ){
+//     return 2;
+//   }
+
+//   if( n < m){
+//     return 1;
+//   }
+//     //horizontally
+//     int horizonCount = tilingProb(n-1 ,m);
+
+//     //vertically
+//     int vertCount = tilingProb(n-m , m);
+
+//     return horizonCount + vertCount;
+
+
+// }
 
 int main(){
 
-    towerOfHanoi(3,"A","B","C");
+    // cout<<tilingProb(4,2);
+
+
+
+    // cout<<countPath(0,0,3,3);
+
+
+
+
+//     printPerm("abcd", "");
+
+
+
+    // string str = "aabnnjnrbeidad";
+    // findOccurences(str,0,'a');
+
+    // string str = "axbcxxd";
+    // string newStr = "";
+    // movingallX(str,0,newStr,0);
+
+
+    // towerOfHanoi(3,"A","B","C");
     // int arr[] = {3,2,4,5,6,2,7,2,2};
     // int size = sizeof(arr) / sizeof(int);
     // int indices[] = {0};
